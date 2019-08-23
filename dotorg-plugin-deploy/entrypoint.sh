@@ -60,8 +60,8 @@ cd "$GITHUB_WORKSPACE"
 TMP_DIR="/github/archivetmp"
 mkdir "$TMP_DIR"
 
-git config --global user.email "10upbot+github@10up.com"
-git config --global user.name "10upbot on GitHub"
+git config --global user.email "pierre@lannoy.fr"
+git config --global user.name "Pierre Lannoy"
 
 # If there's no .gitattributes file, write a default one into place
 if [[ ! -e "$GITHUB_WORKSPACE/.gitattributes" ]]; then
@@ -107,6 +107,6 @@ svn cp "trunk" "tags/$VERSION"
 svn status
 
 echo "➤ Committing files..."
-svn commit -m "Update to version $VERSION from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
+svn commit -m "Release version $VERSION from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
 
 echo "✓ Plugin deployed!"
