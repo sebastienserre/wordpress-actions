@@ -107,6 +107,6 @@ svn cp "trunk" "tags/$VERSION"
 svn status
 
 echo "➤ Committing files..."
-svn commit -m "Release version $VERSION from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
+svn commit -m "Version $VERSION / Released from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
 
 echo "✓ Plugin deployed!"
