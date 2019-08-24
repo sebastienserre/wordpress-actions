@@ -7,7 +7,7 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL maintainer="Pierre Lannoy <pierre@lannoy.fr>"
 LABEL version="1.0.0"
-LABEL repository="http://github.com/helen/actions-wordpress"
+LABEL repository="https://github.com/Pierre-Lannoy/wordpress-actions"
 
 RUN apt-get update \
 	&& apt-get install -y subversion rsync git \
