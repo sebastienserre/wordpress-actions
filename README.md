@@ -1,6 +1,9 @@
 # WordPress Actions!
 
-Here is a collection of GitHub Actions to help with common needs for WordPress development. Specific documentation for each Action is in the `README.md` file in its subdirectory.
+
+* By default, WordPress.org specific assets of your plugin (like icons and headers) must be in a `.wordpress-org` directory at the root of your GitHub repository.
+* You have to write worflows, in yaml, in a `.github/workflows` directory at the root of your GitHub repository.
+* These actions assume you're using strict [Semantic Versioning](https://semver.org/spec/v2.0.0.html) tagging for the full releases of your plugin.
 
 
 ## Deploying a plugin to the WordPress.org repository
