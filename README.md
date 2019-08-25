@@ -27,7 +27,7 @@ When you want to deploy a new version of your plugin, just make a new release in
 * If the tag is like `1.0.0`, it will generate a full release on WordPress.org: trunk and assets will be updated and a new `tags/1.0.0` will be created.
 * If the tag is like `1.0.0-rc1`, it will generate a short release on WordPress.org: only trunk and assets will be updated. It allows, in particular, to make a "strings freeze" to let translators do their work on the "development" branch.
 
-I suggest you to create a workflow like this to implement such a behavior:
+I suggest you to create a workflow like this to implement such behaviors:
 ```yml
 name: New WordPress.org release
 
