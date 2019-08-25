@@ -100,9 +100,12 @@ svn add . --force > /dev/null
 # Also suppress stdout here
 svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm % > /dev/null
 
-# Copy tag locally to make this a single commit
-echo "➤ Copying tag..."
-svn cp "trunk" "tags/$VERSION"
+# If it's a full release i.e. tag like "1.0.0" and not like "1.0.0-rc1",
+# then copy tag before commiting
+if [[ $VERSION != *"-"* ]];then
+    echo "➤ Copying tag..."
+    svn cp "trunk" "tags/$VERSION"
+fi
 
 svn status
 
