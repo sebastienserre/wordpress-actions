@@ -1,5 +1,6 @@
 # WordPress Actions!
 
+WordPress Actions is a collection of actions to easily publish / release your plugin on WordPress.org official repository.
 
 * By default, WordPress.org specific assets of your plugin (like icons and headers) must be in a `.wordpress-org` directory at the root of your GitHub repository.
 * You have to write worflows, in yaml, in a `.github/workflows` directory at the root of your GitHub repository.
