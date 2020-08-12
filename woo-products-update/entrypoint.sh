@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
-SSH_USERNAME=sebastienerre
-SSH_URL=176.31.56.134:61212
+SSH_USERNAME=XXXX
+SSH_URL=XXXX
 
 if [[ -z "$SSH_USERNAME" ]]; then
 	echo "Set the SSH_USERNAME"
@@ -15,11 +15,11 @@ fi
 
 DEPLOY_KEY: ${{ secrets.SERVER_SSH_KEY }}
 ARGS: "-e -c -r --delete"
-SERVER_PORT: 61212
+SERVER_PORT: XXX
 FOLDER: "./"
-SERVER_IP: 176.31.56.134
-USERNAME: sebastienserre
-SERVER_DESTINATION: /var/www/thivinfo.com/web/deploy
+SERVER_IP: 1XXXX
+USERNAME: XXXX
+SERVER_DESTINATION: XXXX
 SSHPATH="$HOME/.ssh"
 mkdir "$SSHPATH"
 echo "$DEPLOY_KEY" > "$SSHPATH/key"
