@@ -19,6 +19,7 @@ In addition to that, you can write to the root of your repository plugin a `.git
 ### Environment variables
 In your _yaml_ files you MUST set this environment variable:
 * `NAME` - the name of the plugin.
+
 You CAN set too these two environment variables:
 * `SLUG` - defaults to the respository name, customizable in case your WordPress repository has a different slug.
 * `ASSETS_DIR` - defaults to `.wordpress-org`, customizable for other locations of WordPress.org plugin repository-specific assets that belong in the top-level `assets` directory (the one on the same level as `trunk`).
