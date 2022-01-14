@@ -110,6 +110,6 @@ fi
 svn status
 
 echo "➤ Committing files..."
-svn commit -m "$SLUG Version $VERSION / Released from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
+svn commit -m "$NAME $VERSION released from GitHub" --no-auth-cache --non-interactive  --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
 
 echo "✓ Plugin deployed!"
