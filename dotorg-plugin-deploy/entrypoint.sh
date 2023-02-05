@@ -60,6 +60,7 @@ cd "$GITHUB_WORKSPACE"
 TMP_DIR="/github/archivetmp"
 mkdir "$TMP_DIR"
 
+git config --global --add safe.directory "*"
 git config --global user.email "pierre@lannoy.fr"
 git config --global user.name "Pierre Lannoy"
 
