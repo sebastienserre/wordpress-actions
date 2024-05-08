@@ -97,6 +97,8 @@ rsync -rc "$GITHUB_WORKSPACE/$ASSETS_DIR/" assets/ --delete
 echo "➤ Preparing files..."
 svn add . --force > /dev/null
 
+echo "---start deletion"
+
 # SVN delete all deleted files
 # Also suppress stdout here
 svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm % > /dev/null
