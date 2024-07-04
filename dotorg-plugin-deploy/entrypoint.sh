@@ -60,6 +60,7 @@ cd "$GITHUB_WORKSPACE"
 TMP_DIR="/github/archivetmp"
 mkdir "$TMP_DIR"
 
+git config --global --add safe.directory "*"
 git config --global user.email "pierre@lannoy.fr"
 git config --global user.name "Pierre Lannoy"
 
@@ -98,7 +99,7 @@ svn add . --force > /dev/null
 
 # SVN delete all deleted files
 # Also suppress stdout here
-svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm % > /dev/null
+svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm --force % > /dev/null
 
 # If it's a full release i.e. tag like "1.0.0" and not like "1.0.0-rc1",
 # then copy tag before commiting
